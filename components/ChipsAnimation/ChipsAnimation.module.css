@@ -1,0 +1,41 @@
+.animationContainer {
+    height: 100% !important;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+    overflow: hidden;
+}
+
+.animationContainer-invert {
+    height: 100vh;
+    white-space: nowrap;
+    animation: scroll-invert 15s linear infinite;
+}
+
+.chip {
+    margin: 24px 0;
+}
+
+.animated-image {
+    position: absolute;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(-15%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes scroll-invert {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-15%);
+    }
+}
